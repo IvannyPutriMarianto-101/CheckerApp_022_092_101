@@ -1,25 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="@drawable/popup_bg">
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
 
-  <TextView
-      android:id="@+id/tvResult"
-      android:layout_width="wrap_content"
+  <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:textSize="18sp"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginBottom="16dp"/>
+      android:layout_margin="16dp"
+      app:cardCornerRadius="25dp"
+      app:cardElevation="4dp"
+      app:cardBackgroundColor="#FFFFFF"
+      android:background="@android:color/transparent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintWidth_max="400dp">
 
-  <Button
-      android:id="@+id/btnDone"
-      android:layout_width="100dp"
-      android:layout_height="wrap_content"
-      android:text="Done"
-      android:backgroundTint="#000000"
-      android:textColor="#FFFFFF"
-      android:layout_gravity="center_horizontal"/>
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+      <!-- ImageView -->
+      <ImageView
+          android:id="@+id/imageViewResult"
+          android:layout_width="60dp"
+          android:layout_height="54dp"
+          android:layout_marginBottom="16dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/positif"
+          android:background="@android:color/transparent"/>
+
+      <!-- TextView -->
+      <TextView
+          android:id="@+id/tvResult"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="Kalimat yang anda inputkan merupakan kalimat yang baik."
+          android:textColor="#000000"
+          android:textSize="16sp"
+          android:fontFamily="@font/inter_medium"
+          android:layout_marginBottom="16dp"
+          android:background="@android:color/transparent"/>
+
+      <!-- Button -->
+      <Button
+          android:id="@+id/btnDone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Done"
+          android:textColor="#4285F4"
+          android:textSize="20sp"
+          android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
