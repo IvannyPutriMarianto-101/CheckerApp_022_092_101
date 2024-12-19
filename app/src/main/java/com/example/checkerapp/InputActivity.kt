@@ -50,7 +50,7 @@ class InputActivity : AppCompatActivity() {
 
     private fun sendTextToAPI(input: String, client: OkHttpClient) {
         // Gunakan URL terbaru dari ngrok
-        val url = "https://034d-34-106-164-132.ngrok-free.app/predict"
+        val url = "https://4d27-34-67-255-116.ngrok-free.app/predict"
 
         try {
             // Validasi URL
